@@ -17,3 +17,16 @@ if (form) {
     form.reset();
   });
 }
+
+const scrollTopbtn = document.getElementById("scrollTopBtn");
+window.onscroll = () => {
+    if(document.documentElement.scrollTop > 200) {
+        scrollTopbtn.style.display = "block";
+    } else {
+        scrollTopbtn.style.display = "none";
+    }
+}
+
+scrollTopbtn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+})
